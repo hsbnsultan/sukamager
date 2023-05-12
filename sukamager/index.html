@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>SM Store</title>
+</head>
+<body>
+	<div class="fContainer">
+		<nav class="wrapper">
+			<div class="brand">
+				<div class="firstname">SM</div>
+				<div class="lastname">Store</div>
+			</div>
+
+			<style>	
+				.jam-digital {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-family: Arial, sans-serif;
+					margin-left: 10px;
+				  }
+			  
+				  .kotak {
+					background-color: black;
+					border-radius: 5px;
+					padding: 10px;
+					margin: 0 5px;
+				  }
+			  
+				  #jam, #menit, #detik {
+					font-size: 24px;
+					color: white;
+					margin: 0;
+				  }
+
+				  @media only screen and (max-width: 600px) {
+					.jam-digital {
+						flex-direction: row;
+					}
+				
+					.kotak {
+						margin: 5px 0;
+					}
+				}
+			</style>
+
+			<div class="jam-digital">
+				<div class="kotak">
+					<p id="jam"></p>
+				</div>
+				<div class="kotak">
+					<p id="menit"></p>
+				</div>
+				<div class="kotak">
+					<p id="detik"></p>
+				</div>
+			</div>
+
+			<ul class="navigation">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#transaksi" class="active">Transaksi</a></li>
+				<li><a href="#about">About</a></li>
+				<li><img src="img/3aO.gif" alt="..." /></li>
+			</ul>	
+		</nav>
+	</div>
+
+		<style>
+			.carousel {
+				width: 100%;
+				overflow: hidden;
+				position: absolute;
+				top: 40%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.carousel-btn:hover {
+				background-color: rgba(0, 0, 0, 0.8);
+			}
+			
+			.carousel-prev {
+				left: 10px;
+			}
+			
+			.carousel-next {
+				right: 10px;
+			}
+			
+			.slide {
+				display: none;
+				width: 100%;
+				height: 400px;
+				margin-top: -30px;
+			}
+			
+			.slide img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+			
+			.slide.active {
+				display: block;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.carousel {
+					position: relative;
+					top: 0;
+					left: 0;
+					transform: none;
+				}
+				
+				.slide {
+					height: 200px;
+					margin-top: 0;
+				}
+				
+				.slide img {
+					object-fit: cover;
+				}
+				
+				.carousel-btn {
+					display: none;
+				}
+			}
+		</style>			
+		  
+		<div class="carousel">
+			<div class="slide">
+			<img src="img/1.jpg" alt="Gambar 1">
+			</div>
+			<div class="slide">
+			<img src="img/2.jpg" alt="Gambar 2">
+			</div>
+			<div class="slide">
+			<img src="img/3.jpg" alt="Gambar 3">
+			</div>
+		</div>
+
+		<section id="home">
+			<div class="custom-container">
+				<div class="box-container">
+					<div class="box box-start">
+						<img src="assets/1.png" alt="">
+						<h3>INSTAGRAM</h3>
+						<p>Murah, terpercaya, dan terjamin. Silahkan hubungin kami</p>
+					</div>
+			
+					<div class="box box-left">
+						<img src="assets/2.png" alt="">
+						<h3>TIKTOK</h3>
+						<p>Murah, terpercaya, dan terjamin. Silahkan hubungin kami.</p>
+					</div>
+			
+					<div class="box box-center">
+						<img src="assets/3.png" alt="">
+						<h3>YOUTUBE</h3>
+						<p>Murah, terpercaya, dan terjamin. Silahkan hubungin kami.</p>
+					</div>
+			
+					<div class="box box-center">
+						<img src="assets/4.png" alt="">
+						<h3>FACEBOOK</h3>
+						<p>Murah, terpercaya, dan terjamin. Silahkan hubungin kami.</p>
+					</div>
+			
+					<div class="box box-center">
+						<img src="assets/5.png" alt="">
+						<h3>TWITTER</h3>
+						<p>Murah, terpercaya, dan terjamin. Silahkan hubungin kami.</p>
+					</div>	
+				</div>
+			</div>			
+		</section>
+
+		<section id="transaksi">
+			<div class="my-container">
+			  <div class="parallax">
+				<div class="tentang">
+				  <p class="title">Cie Pengen Punya Followers Banyak, Like Banyak dan Subcriber Banyak</p>
+				  <p class="description">Tapi Bingung Mau Ke Online Shop Mana Yang Murah, Terjamin & Terpercaya</p>
+				</div>
+			  </div>
+		  
+			  <div class="tabel-harga">
+				<div class="header header-instagram">
+					<span class="paket">INSTAGRAM</span>
+					<span class="menu">Menu</span>
+				</div>
+	 
+				<ul>
+					<li>Penambah Followers Permanen</li>
+					<li>Penambah Followers Semi-Permanen</li>
+					<li>Penambah Like & Coment</li>
+					<li>Penambah Viewers</li>
+				</ul>
+	 
+				<div class="ruang-tombol">
+					<button class="btn-cta" onclick="redirWhatsapp()">Pesan Sekarang</button>
+				</div>
+			</div>
+	 
+			<div class="tabel-harga">
+				<div class="header header-tiktok">
+					<span class="paket">TIKTOK</span>
+					<span class="Menu">Menu</span>
+				</div>
+	 
+				<ul>
+					<li>Penambah Followers Permanen</li>
+					<li>Penambah Followers Semi Permanen</li>
+					<li>Penambah Like</li>
+					<li>Penambah Viewers</li>
+				</ul>
+	 
+				<div class="ruang-tombol">
+					<button class="btn-cta" onclick="redirWhatsapp()">Pesan Sekarang</button>
+				</div>
+			</div>
+			
+			<div class="tabel-harga">
+				<div class="header header-youtube">
+					<span class="paket">YOUTUBE</span>
+					<span class="Menu">Menu</span>
+				</div>
+	 
+				<ul>
+					<li>Penambah Subscribers Permanen</li>
+					<li>Penambah Subscribers Semi Permanen</li>
+					<li>Penambah Likes</li>
+					<li>Penambah Live Stream Views</li>
+				</ul>
+	 
+				<div class="ruang-tombol">
+					<button class="btn-cta" onclick="redirWhatsapp()">Pesan Sekarang</button>
+				</div>
+			</div>
+
+			<div class="tabel-harga">
+				<div class="header header-facebook">
+					<span class="paket">FACEBOOK</span>
+					<span class="Menu">Menu</span>
+				</div>
+	 
+				<ul>
+					<li>Penambah Facebook Comement</li>
+					<li>Penambah Facebook Live Stream</li>
+					<li>Penambah Facebook Page Followers</li>
+					<li>Penambah Facebook Page Likes</li>
+				</ul>
+	 
+				<div class="ruang-tombol">
+					<button class="btn-cta" onclick="redirWhatsapp()">Pesan Sekarang</button>
+				</div>
+			</div>
+		</div>
+</section>		  
+
+		<script>
+			let slides = document.querySelectorAll(".slide");
+			let currentSlide = 0;
+		
+			function showSlide(n) {
+			  slides[currentSlide].classList.remove("active");
+			  currentSlide = (n + slides.length) % slides.length;
+			  slides[currentSlide].classList.add("active");
+			}
+		
+			setInterval(() => {
+			  showSlide(currentSlide + 1);
+			}, 3000);
+		  </script>
+
+		  <script>
+			function redirWhatsapp() {
+                window.location.href ="https://wa.me/+6281315946590"
+            }
+        </script>
+
+		<script>
+			window.setTimeout("waktu()", 1000);
+		 
+			function waktu() {
+				var waktu = new Date();
+				setTimeout("waktu()", 1000);
+				document.getElementById("jam").innerHTML = waktu.getHours();
+				document.getElementById("menit").innerHTML = waktu.getMinutes();
+				document.getElementById("detik").innerHTML = waktu.getSeconds();
+			}
+		</script>
+
+		<section id="about">
+		<footer>
+			<h5 class="text-uppercase mt-2" style="margin:0">SM Store</h5>
+				<div class="mt-2">
+					<p>SM Store adalah tempat untuk mengeluarkan uang, melakukan sebuah investasi yang sebelumnya sepi menjadi dadakan dalam 1x24 jam menjadi ramai. Ramai pun sesuai dengan isi dompet, Permanent or Non Permanent?
+					</p>
+				</div>
+
+				<style>
+					footer {
+						background-color: black;
+						padding: 25px;
+					  }
+					h5 {
+					  font-size: 24px;
+					  font-weight: bold;
+					  text-transform: uppercase;
+					  margin: 0;
+					  color: white;
+					}
+				  
+					p {
+					  font-size: 18px;
+					  line-height: 1.5;
+					  color: white;
+					}
+				  
+					.mt-2 {
+					  margin-top: 0px;
+					}
+
+					/* Aturan media query untuk perangkat mobile */
+					@media only screen and (max-width: 600px) {
+						h5 {
+							font-size: 20px;
+						}
+
+						p {
+							font-size: 16px;
+						}
+					}
+				</style>
+			</div>
+		</section>
+
+		<style>
+			#footer-credit {
+			  background: #020e20;
+			  padding: 10px;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			}
+		  
+			#footer-credit small {
+			  color: #fff;
+			  text-align: center;
+			}
+		  
+			#footer-credit a {
+			  color: #fff;
+			  text-decoration: none;
+			}
+
+			/* Aturan media query untuk perangkat mobile */
+			@media only screen and (max-width: 600px) {
+				#footer-credit {
+					padding: 5px;
+			}
+
+				#footer-credit small {
+					font-size: 12px;
+			}
+		}
+		  </style>
+		  
+		<div class="container-fluid mt-2">
+			<div class="row" id="footer-credit">
+			<div class="col">
+			<div class="container mt-2 mb-2 text-center">
+			<small>
+			Copyright &copy; 2023 by <a class="text-white">SM STORE</a>. All Rights Reserved</small>
+			</div>
+			</div>
+			</div>
+		</div>
+
+</body>
+</html>
